@@ -1,0 +1,14 @@
+<app-header></app-header>
+<main>
+  <ng-container *ngIf="(unsplashItems$ | async) as unsplashItems; else progressTemplate">
+    <article class="sh-main">
+      <app-card *ngFor="let unsplashItem of unsplashItems" [unsplashItem]="unsplashItem">
+      </app-card>
+    </article>
+  </ng-container>
+  <ng-template #progressTemplate>
+    <div class="sh-spinner">
+      <mat-spinner></mat-spinner>
+    </div>
+  </ng-template>
+</main>

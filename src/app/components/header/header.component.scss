@@ -1,0 +1,20 @@
+.sh-header {
+  padding: 0 3rem;
+}
+
+.sh-logo {
+  display: flex;
+  &__img {
+    width: 30px;
+    height: 30px;
+    margin-inline-end: 1rem;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+}
+
+::ng-deep {
+  .mat-toolbar .mat-toolbar-row {
+    padding: 0;
+  }
+}

@@ -1,0 +1,28 @@
+<mat-card class="sh-card">
+  <mat-card-header>
+    <div
+      style="--url-image: url('{{ unsplashItem.user.profile_image.medium }}')"
+      class="sh-card__avatar"
+      mat-card-avatar
+    >
+    </div>
+    <mat-card-title class="sh-card__text">{{ unsplashItem.user.name }}</mat-card-title>
+    <mat-card-subtitle>{{ unsplashItem.user.username }}</mat-card-subtitle>
+  </mat-card-header>
+  <img
+    mat-card-image
+    class="sh-card__image"
+    [src]="unsplashItem.urls.regular"
+    alt="Photo of a Shiba Inu"
+  >
+  <mat-card-content>
+    <h2 class="sh-card__text">{{ unsplashItem.alt_description | titlecase }}</h2>
+    <ul class="sh-card__text">
+      <li>Creado en: {{ unsplashItem.created_at | date: 'medium' }}</li>
+      <li>Actualizado en: {{ unsplashItem.updated_at | date: 'medium' }}</li>
+    </ul>
+    <p class="sh-card__text sh-card__footer">
+      {{ unsplashItem.likes }} likes <mat-icon color="warn">favorite</mat-icon>
+    </p>
+  </mat-card-content>
+</mat-card>
