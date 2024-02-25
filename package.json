@@ -5,6 +5,7 @@
     "ng": "ng",
     "config": "node ./config/set-env.config.js",
     "start": "npm run config -- --environment=dev && ng serve",
+    "start:railway": "node server.js",
     "build": "npm run config -- --environment=prod && ng build --configuration production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
